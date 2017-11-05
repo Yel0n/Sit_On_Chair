@@ -1,0 +1,21 @@
+@import "partials/reset";
+@import "partials/nav";
+@import "partials/header";
+@import "partials/content";
+@import "partials/prices";
+@import "partials/form";
+@import "partials/footer";
+
+*{
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+.container{
+  width: 1056px;
+  margin: 0 auto;
+}
+.row::after{
+  clear: both;
+  display: block;
+  content: "";
+}

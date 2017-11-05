@@ -1,0 +1,21 @@
+footer{
+  height: 110px;
+  color: #7a7a7a;
+  font-size: 18px;
+  .copyrights{
+    float: left;
+    line-height: 110px;
+  }
+  .social{
+    float: right;
+    line-height: 110px;
+  }
+  .logo-foot{
+    float: right;
+    line-height: 110px;
+    margin-left: 60px;
+    span{
+      font-weight: 700;
+    }
+  }
+}
