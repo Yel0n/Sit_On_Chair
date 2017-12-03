@@ -1,4 +1,4 @@
-$(function(){
+$(() => {
 
 //Menu
   var li = $('nav li').eq(0);
@@ -6,10 +6,10 @@ $(function(){
 
   menu.hide();
 
-  li.on('mouseover', function(){
+  li.on('mouseover', () => {
       menu.show();
   });
-  li.on('mouseout', function(){
+  li.on('mouseout', () => {
       menu.hide();
   });
 
@@ -20,7 +20,7 @@ $(function(){
   pictures.hide();
   pictures.eq(counter).show();
 
-  $('.right').on('click', function(){
+  $('.right').on('click', () => {
     pictures.eq(counter).hide();
     counter++;
     if(counter == pictures.length){
@@ -29,7 +29,7 @@ $(function(){
     pictures.eq(counter).show();
   });
 
-  $('.left').on('click', function(){
+  $('.left').on('click', () => {
     pictures.eq(counter).hide();
     counter--;
     if(counter == -1){
@@ -42,28 +42,28 @@ $(function(){
   var img = $('.img');
   var name = $('.name');
 
-    img.eq(0).on('mouseover', function(){
+    img.eq(0).on('mouseover', () => {
       name.eq(0).hide();
     });
-    img.eq(1).on('mouseover', function(){
+    img.eq(1).on('mouseover', () => {
       name.eq(1).hide();
     });
 
-    img.eq(0).on('mouseout', function(){
+    img.eq(0).on('mouseout', () => {
       name.eq(0).show();
     });
-    img.eq(1).on('mouseout', function(){
+    img.eq(1).on('mouseout', () => {
       name.eq(1).show();
     });
 
 //Animated counter
-    $('.count').each(function () {
+    $('.count').each(function(){
         $(this).prop('Counter',0).animate({
             Counter: $(this).text()
         }, {
-            duration: 2000,
+            duration: 1000,
             easing: 'swing',
-            step: function (now) {
+            step: function(now){
                 $(this).text(Math.ceil(now));
             }
         });
